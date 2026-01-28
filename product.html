@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A walking adventure website related to hiking and nature exploration">
+    <meta name="keywords" content="outdoor activities, hiking, nature">
+    <meta name="author" content="Aneliya Chiplkakova">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Adventure Homepage</title>
+    <link href="Style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>  <!-- Visible page  -->
+
+    <div class="image-container">
+        <img class="banner" src="Images/banner.jpg" alt="banner">
+    </div>
+                           <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html" class="navbar">Home</a>
+        <a href="about.html" class="navbar">About</a>
+        <a href="contact.html" class="navbar">Contact</a>
+        <a href="product.html" class="navbar">Product</a>
+        <a href="cart.html" class="navbar">Cart</a>
+    </div>
+
+ <h1>Products</h1>   <!-- Main heading for the products page -->
+
+  <h2>Product slideshow</h2>
+  <h3>Go to the Shopping Cart to purchase these products</h3>
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">   <!-- Holds all slideshow elements -->
+
+
+    <!-- Slide 1 -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>  <!-- Shows slide number -->
+      <img src="Images/bottle.jpg" alt="bottle.jpg" style="width:80%">
+      <div class="text">bottle</div>   <!-- Product caption -->
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="Images/shirt.jpg" alt="shirt.jpg" style="width:80%">
+      <div class="text">shirt</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="Images/outdoor.jpg" alt="outdoor.jpg" style="width:80%">
+      <div class="text">outdoor</div>
+    </div>
+
+    <!-- Arrows for next/previous slide  -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+
+  <br>
+
+  <!-- Dots  navigations -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <!-- JavaScript  controlling slideshow controls -->
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+</body>
+</html>

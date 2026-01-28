@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results</title>
+<link href="Style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="navbar">
+ <a href="contact.html" class="navbar">Back to Form</a>
+</div>
+
+<h2>submitted data</h2>
+
+<div id="results-container"></div>
+
+<script>
+//extract the data from the contact form using a JavaScript Query
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
+//gets the form data
+const email = urlParams.get('email');
+const phone = urlParams.get('phone');
+const message = urlParams.get('message');
+
+// Display data in the results-container DIV
+const resultsContainer = document.getElementById('results-container');
+
+resultsContainer.innerHTML = `
+<p><strong>Email Address:</strong> ${email}</p>
+<p><strong>Telephone Number:</strong> ${phone}</p>
+<p><strong>Message:</strong> ${message}</p>
+`;
+</script>
+
+</body>
+</html>

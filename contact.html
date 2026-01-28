@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                       <!-- Character encoding for the page -->
+    <meta charset="UTF-8">
+    <meta name="description" content="A walking adventure website related to hiking and nature exploration">
+    <meta name="keywords" content="outdoor activities, hiking, nature">
+    <meta name="author" content="Aneliya Chiplkakova">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Adventure Homepage</title>
+    <link href="Style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+              <!-- Banner image at the top  -->
+
+    <div class="image-container">
+        <img class="banner" src="Images/banner.jpg" alt="banner">
+    </div>
+                 <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html" class="navbar">Home</a>
+        <a href="about.html" class="navbar">About</a>
+        <a href="contact.html" class="navbar">Contact</a>
+        <a href="product.html" class="navbar">Product</a>
+        <a href="cart.html" class="navbar">Cart</a>
+    </div>
+            <!-- Contact form section -->
+<h2>Contact Us</h2>
+
+<div class="form-container">
+             <!-- Form that sends the data ti results-->
+  <form action="results.html" method="GET">
+
+    <div>    <!-- Email input  field-->
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="your email address" required><br><br>
+    </div>
+
+    <div>
+      <label for="phone">Telephone Number:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="your Telephone Number" required><br><br>
+    </div>
+
+    <div>   <!-- Message box   where the user writes theit enquiry-->
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Tell us what you need" required></textarea><br><br>
+    </div>
+                <!-- Submit button sends the form -->
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+  </form>
+</div>
+</body>
+</html>   
